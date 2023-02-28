@@ -1,0 +1,271 @@
+body {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background: rgb(217,225,247);
+background: radial-gradient(circle, rgba(217,225,247,1) 10%, rgba(107,115,125,1) 100%);
+}
+
+header {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width: 100%;
+    background-color:rgb(24, 22, 22);
+}
+
+h1 {
+    font-size:100px;
+    font-family: "heebo";
+    margin:10px 0;
+    background-image: linear-gradient(45deg, #f76a33, #af4261);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    width:85%;
+    text-align:center;
+}
+
+h2 {
+    font-size:50px;
+    font-family: "oswald";
+    margin:0 10px 20px 10px;
+    color:#517a94;
+}
+
+main {
+    width: 80%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:20px;
+}
+
+.playArrow {
+    fill:rgba(167, 39, 39, 0.8);
+    opacity:0%;
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:10px;
+    right:10px;
+    transition:opacity .25s ease-out;
+    transition:transform .25s ease-out;
+}
+
+.playArrow:hover {
+    transform:scale(110%);
+}
+
+ul {
+    display:flex;
+    width:100%;
+    justify-content:space-evenly;
+    padding:0;
+    flex-wrap:wrap;
+}
+
+li{
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    width:18%;
+    margin:1%;
+    aspect-ratio:.5625;
+}
+
+#uc a {
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/ucPoster.jpg");
+    background-position-x:center;
+}
+
+#fc a {
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/gGundamPoster2.jpg");
+    /*background-position-x:center;*/
+    background-position:45%;
+}
+
+#ac a {
+    background-color:rgba(0,0,0,0);
+}
+
+#ac .backgroundImg {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/wingPoster.jpg");
+    background-position-x:left;
+    background-repeat: no-repeat;
+    background-size:cover;
+    transition: background-position-x 7s linear;
+}
+
+@keyframes moveWingSquad {
+    from{
+        background-position-x:left;
+    }
+
+    45%{
+        background-position-x:right;
+    }
+
+    50%{
+        background-position-x:right;
+    }
+
+    95% {
+        background-position-x:left;
+    }
+
+    to{
+        background-position-x:left;
+    }
+}
+#ac a:hover .backgroundImg {
+    animation: moveWingSquad 20s ease-in-out infinite;
+}
+#ac a:hover .backgroundImg:after {
+    background-position-x:center;
+}
+
+#aw a {
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/xPoster.jpg");
+    background-position-x:45%;
+}
+
+#rc a {
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/gRecoPoster.jpg");
+    background-position:45%;
+}
+
+#pd a {
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/iboPoster.jpg");
+    background-position:center;
+}
+
+#as a {
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/witch\ poster.jpg");
+    background-position:center;
+}
+
+#ce a {
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/seedPoster.jpg");
+    background-position-x:center;
+}
+
+#cc {
+    aspect-ratio:3;
+    width:100%;
+}
+#cc a {
+    background-image:url("Images/turnaA.jpg");
+    background-position-y:35%;
+}
+
+.glossary a {
+    position:relative;
+    text-decoration:none;
+    color:azure;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    height:100%;
+    background-color:black;
+    transition: transform .25s ease-out;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(24, 22, 22, .25);
+    border-radius:3px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.glossary span {
+    position:absolute;
+    bottom:-18.39;
+    transition: transform .25s ease-out;
+}
+
+.glossary a:hover {
+    transform:scale(105%);
+}
+
+.glossary a:hover .playArrow {
+    opacity:100%;
+}
+.glossary a:hover h3 {
+    transform:translateY(-18.39px);
+}
+.glossary a:hover span {
+    transform:translateY(-18.39px);
+}
+
+h3 {
+    margin:0;
+    font-family: "oswald";
+    transition: transform .25s ease-out;
+}
+
+.btn {
+    position:fixed;
+    bottom:30px;
+    left:10px;
+    background-color:rgb(24, 22, 22);
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    width:110px;
+    height:30px;
+    border-radius:3px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 
+    'Trebuchet MS', sans-serif;
+    font-size:20px;
+    padding:0 5px;
+    z-index:2;
+}
+.btn img {
+    margin-right:3px;
+}
+
+@media screen and (max-width:1300px) and (min-width:718px) {
+    li {
+        width: 31.33%;
+    }
+
+    #cc {
+        /*aspect-ratio:.5625;*/
+        width: 64.66%;
+    }
+    #cc a {
+        background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(107,115,125,0) 100%), url("Images/turnaB.jpeg");
+        background-position-x: center;
+    }
+}
+@media screen and (max-width: 717px) {
+    li {
+        width: 48%;
+    }
+    #cc {
+        aspect-ratio:.5625;
+        width: 48%;
+    }
+    #cc a {
+        background-image:url("Images/turnaB.jpeg");
+        background-position-x: center;
+    }
+    h1 {
+        font-size:70px;
+    }
+}
