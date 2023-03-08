@@ -253,19 +253,36 @@ h3 {
         background-position-x: center;
     }
 }
-@media screen and (max-width: 717px) {
+@media screen and (max-width: 717px) and (min-width: 401px) {
     li {
         width: 48%;
     }
     #cc {
         aspect-ratio:.5625;
-        width: 48%;
+        width: 98%;
     }
     #cc a {
-        background-image:url("Images/turnaB.jpeg");
+        background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/turnaB.jpeg");
         background-position-x: center;
     }
     h1 {
         font-size:70px;
+    }
+}
+@media screen and (max-width: 400px) {
+    li {
+        width: 98%;
+    }
+    #cc {
+        aspect-ratio:.5625;
+    }
+    h1 {
+        font-size:70px;
+    }
+    #cc a {
+        background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, 
+    rgba(107,115,125,0) 100%), url("Images/turnaB.jpeg");
+        background-position-x: center;
     }
 }
