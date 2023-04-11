@@ -3,7 +3,7 @@ body {
     flex-direction:column;
     align-items:center;
     background: rgb(217,225,247);
-background: radial-gradient(circle, rgba(217,225,247,1) 10%, rgba(107,115,125,1) 100%);
+    background: radial-gradient(circle, rgba(217,225,247,1) 10%, rgb(47, 55, 66) 100%);
 }
 
 header {

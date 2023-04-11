@@ -33,12 +33,12 @@ function toggleMute() {
     if (isMuted) { //unmutes
         text.innerHTML = "Sound On";
         UnmuteAll();
-        soundImg.src = "Assets/volume-medium.svg";
+        soundImg.src = "/volume-medium.svg";
     }
     else { //mutes
         text.innerHTML = "Sound Off";
         MuteAll();
-        soundImg.src = "Assets/volume-mute.svg";
+        soundImg.src = "/volume-mute.svg";
         currentSong.pause();
         currentSong.currentTime = 0;
         currentSong = null;
@@ -69,7 +69,7 @@ Array.from(buttons).forEach(button => {
             song.pause();
             song.currentTime = 0;
         }
-        if (arrow.src.indexOf("Assets/play-arrow.svg") != -1) {
+        if (arrow.src.indexOf("/play-arrow.svg") != -1) {
             arrow.style.opacity = "0";
         }
     })
@@ -83,16 +83,16 @@ Array.from(buttons).forEach(button => {
         }
         if (currentSong === song) {
             //arrow.style.opacity="0%";
-            arrow.src = "Assets/play-arrow.svg";
+            arrow.src = "/play-arrow.svg";
             arrow.parentElement
             currentSong = null;
         }
         else {
             Array.from(document.getElementsByClassName("playArrow")).forEach(arr => {
                 arr.style.opacity = "0%";
-                arr.src="Assets/play-arrow.svg";
+                arr.src="/play-arrow.svg";
             })
-            arrow.src = "Assets/pause_icon.svg";
+            arrow.src = "/pause_icon.svg";
             arrow.style.opacity = "100%";
             currentSong = song;
             song.play();
