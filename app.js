@@ -19,6 +19,10 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
 
+// Views
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+
 // Routes
 app.use('/', homeRoutes)
 

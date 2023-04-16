@@ -39,9 +39,11 @@ function toggleMute() {
         text.innerHTML = "Sound Off";
         MuteAll();
         soundImg.src = "/volume-mute.svg";
-        currentSong.pause();
-        currentSong.currentTime = 0;
-        currentSong = null;
+        if (currentSong) {
+            currentSong.pause();
+            currentSong.currentTime = 0;
+            currentSong = null;
+        }
     }
     isMuted = !isMuted;
 }
