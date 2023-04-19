@@ -138,6 +138,10 @@ li{
     background-position-x:45%;
 }
 
+#ad a {
+    background-position-x:center;
+}
+
 #rc a {
     background-position:45%;
 }

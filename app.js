@@ -7,6 +7,7 @@ const mongodb = require("mongodb")
 const morgan = require("morgan")
 const router = express.Router();
 const homeRoutes = require('./routes/home')
+const timleineRoutes = require('./routes/timelines')
 
 // Static folder
 app.use(express.static(path.join(__dirname, 'public')))
@@ -25,6 +26,7 @@ app.set('view engine', 'ejs')
 
 // Routes
 app.use('/', homeRoutes)
+app.use('/timeline', timelineRoutes)
 
 const PORT = process.env.PORT || 5000
 

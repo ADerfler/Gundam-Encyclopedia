@@ -53,17 +53,17 @@ const timelines = {
     annoDomini: new Timeline(
         "Anno Domini", 
         "ad",
-        "The Greatest Powercreep", 
-        "",
-        ""
+        "The War to End War", 
+        "00PosterB.jpg",
+        "Quantum Burst.mp3"
     ),
 
     advancedGen: new Timeline(
         "Advanced Generation", 
         "ag",
         "The Three In One", 
-        "",
-        ""
+        "agePoster.jpg",
+        "Unmei no Saki e.mp3"
     ),
 
     reguildCentury: new Timeline(

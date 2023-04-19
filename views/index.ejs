@@ -21,14 +21,14 @@
             <ul class="glossary">
                 <% Object.values(timelines).forEach(timeline => { %>
                     <li id = <%= timeline.id %>>
-                        <a href= <%= timeline.id %>>
+                        <a href= "/timeline/<%= timeline.id %>">
                             <img src = "/play-arrow.svg" class="playArrow">
                             <h3><%= timeline.title %></h3>
                             <span><%= timeline.shortDesc%></span>
                             <% if (timeline.id === "ac") {%>
                                 <div class="backgroundImg"></div>
                             <%}%>
-                            <audio src= "/Music/<%= timeline.music %>"" type="audio/mpeg"></audio>
+                            <audio loop src= "/Music/<%= timeline.music %>"" type="audio/mpeg"></audio>
                         </a>
                         <% if (timeline.id !== "ac") {%>
                         <style>

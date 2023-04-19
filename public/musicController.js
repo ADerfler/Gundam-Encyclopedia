@@ -52,7 +52,7 @@ document.getElementsByClassName("btn")[0].addEventListener("click", toggleMute);
 
 //Add Sound on Hover and play music permanently if the Play Button is clicked
 var buttons = document.getElementsByClassName("glossary")[0].getElementsByTagName('li');
-Array.from(buttons).forEach(button => {
+Array.from(buttons).forEach((button, i) => {
     let song = button.getElementsByTagName("audio")[0]
     let arrow = button.getElementsByClassName("playArrow")[0];
     
