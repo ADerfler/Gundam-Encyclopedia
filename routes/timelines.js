@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const timelineController = require('../controllers/timeline')
+const timelineController = require('../controllers/timelines')
 
-router.get('/', homeController.getIndex)
+router.get('/:id', timelineController.getTimeline)
 
 module.exports = router

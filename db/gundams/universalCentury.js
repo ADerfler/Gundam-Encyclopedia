@@ -1,11 +1,11 @@
 const Gundam = require("./gundamSchema")
 
-const ucGundams = {
+module.exports = {
     rx78: new Gundam(
         "Gundam", 
         "RX-78-2",
         "0079",
-        "",
+        "/images/uc/rx782b.jpg",
         "",
         1979
     ),
@@ -13,7 +13,7 @@ const ucGundams = {
         "Gundam Ground Type", 
         "RX-79[G]",
         "0079",
-        "",
+        "/images/uc/rx79g.jpg",
         "",
         1996
     ),
@@ -21,7 +21,7 @@ const ucGundams = {
         "Gundam EZ-8", 
         "RX-79[G]Ez-8",
         "0079",
-        "",
+        "/images/uc/ez8.png",
         "",
         1996
     ),
@@ -29,7 +29,7 @@ const ucGundams = {
         "Alex Gundam", 
         "RX-78NT-1",
         "0079",
-        "",
+        "/images/uc/alex.jpg",
         "",
         1989
     ),
@@ -37,7 +37,7 @@ const ucGundams = {
         "Full Armor Gundam (Thunderbolt)", 
         "FA-78",
         "0079",
-        "",
+        "/images/uc/fa78tb.png",
         "",
         2015
     ),
@@ -45,7 +45,7 @@ const ucGundams = {
         "Atlas", 
         "RX-78AL",
         "0080",
-        "",
+        "/images/uc/atlas.jpg",
         "",
         2017
     ),

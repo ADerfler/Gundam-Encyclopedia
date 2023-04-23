@@ -1,8 +1,9 @@
 const timelines = require('../db/timelines/timelines.js')
 module.exports = {
-    getIndex: (req, res) => {
-        res.render('index.ejs', {
-            timelines: timelines
+    getTimeline: (req, res) => {
+        let timeline = timelines[req.params.id]
+        res.render('uc.ejs', {
+            timeline: timeline,
         })
     }
     

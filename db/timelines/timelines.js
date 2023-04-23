@@ -1,24 +1,25 @@
 class Timeline {
-    constructor(title, id, shortDesc, image, music) {
+    constructor(title, id, shortDesc, image, music, gundams) {
         this.title = title
         this.id = id
         this.shortDesc = shortDesc
         this.image = image
         this.music = music
-        this.gundams = []
+        this.gundams = gundams || []
     }
 }
 
 const timelines = {
-    universalCentury: new Timeline(
+    uc: new Timeline(
         "Universal Century", 
         "uc",
         "The Epic", 
         "ucPoster.jpg",
-        "Beyond The Time Remix.mp3"
+        "Beyond The Time Remix.mp3",
+        require("../gundams/universalCentury")
     ),
 
-    futureCentury: new Timeline(
+    fc: new Timeline(
         "Future Century", 
         "fc",
         "The Fun One", 
@@ -26,7 +27,7 @@ const timelines = {
         "Shining Finger.mp3"
     ),
 
-    afterColony: new Timeline(
+    ac: new Timeline(
         "After Colony", 
         "ac",
         "The Western Favorite", 
@@ -34,7 +35,7 @@ const timelines = {
         "Just Communication.mp3"
     ),
 
-    afterWar: new Timeline(
+    aw: new Timeline(
         "After War", 
         "aw",
         "The Bad Ending", 
@@ -42,7 +43,7 @@ const timelines = {
         "Resolution.mp3"
     ),
 
-    cosmicEra: new Timeline(
+    ce: new Timeline(
         "Cosmic Era", 
         "ce",
         "The Eastern Favorite", 
@@ -50,7 +51,7 @@ const timelines = {
         "Invoke.mp3"
     ),
 
-    annoDomini: new Timeline(
+    ad: new Timeline(
         "Anno Domini", 
         "ad",
         "The War to End War", 
@@ -58,7 +59,7 @@ const timelines = {
         "Quantum Burst.mp3"
     ),
 
-    advancedGen: new Timeline(
+    ag: new Timeline(
         "Advanced Generation", 
         "ag",
         "The Three In One", 
@@ -66,7 +67,7 @@ const timelines = {
         "Unmei no Saki e.mp3"
     ),
 
-    reguildCentury: new Timeline(
+    rc: new Timeline(
         "Reguild Century", 
         "rc",
         "The Lovable Mess", 
@@ -74,7 +75,7 @@ const timelines = {
         "G - Self no Aoi Sora.mp3"
     ),
 
-    postDisaster: new Timeline(
+    pd: new Timeline(
         "Post Disaster", 
         "pd",
         "The Edgy One", 
@@ -82,15 +83,16 @@ const timelines = {
         "Raise Your Flag.mp3"
     ),
 
-    adStella: new Timeline(
+    as: new Timeline(
         "Ad Stella", 
         "as",
         "The New Kid", 
         "witch poster.jpg",
-        "The Witch From Mercury.mp3"
+        "The Witch From Mercury.mp3",
+        require("../gundams/adstella.js")
     ),
 
-    correctCentury: new Timeline(
+    cc: new Timeline(
         "Correct Century", 
         "cc",
         "The Good Ending", 
@@ -98,6 +100,6 @@ const timelines = {
         "Moon.mp3"
     )
 }
-timelines.correctCentury.secondImage = "turnaB.jpg"
+timelines.cc.secondImage = "turnaB.jpg"
 
 module.exports = timelines
